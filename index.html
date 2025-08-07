@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPulse - Live the Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+                    <span><i class="fas fa-envelope"></i> info@eventpulse.com</span>
+                </div>
+                <div class="header-announcement">
+                    <span class="pulse-dot"></span>
+                    <span>Next Event: Neon Nights Festival - March 15, 2025</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h1>EventPulse</h1>
+                        <span>Live the Experience</span>
+                    </div>
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="events.html" class="nav-link"><i class="fas fa-calendar"></i> Events</a></li>
+                    <li><a href="schedules.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                    <li><a href="speakers.html" class="nav-link"><i class="fas fa-users"></i> Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-phone"></i> Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="booking.html" class="btn-primary book-now-btn">
+                        <i class="fas fa-ticket-alt"></i> Book Tickets
+                    </a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop>
+                <source
+                    src="https://player.vimeo.com/external/432462569.sd.mp4?s=c3b7b5f8b3c0d6e8f0a2d5c7b9e1f3a5c7d9e2f4&profile_id=165"
+                    type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title glitch" data-text="LIVE THE EXPERIENCE">
+                        LIVE THE EXPERIENCE
+                    </h1>
+                    <p class="hero-subtitle fade-in-up">
+                        Immerse yourself in world-class events, unforgettable music, and cutting-edge technology
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50000">0</span>
+                            <span class="stat-label">Happy Attendees</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="200">0</span>
+                            <span class="stat-label">Events Hosted</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="500">0</span>
+                            <span class="stat-label">Artists Featured</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="events.html" class="btn-primary btn-lg">
+                            <i class="fas fa-calendar"></i>
+                            Explore Events
+                        </a>
+                        <a href="#upcoming" class="btn-secondary btn-lg">
+                            <i class="fas fa-play"></i>
+                            Watch Trailer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Slider -->
+    <section class="upcoming-events" id="upcoming">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="section-subtitle">Don't miss out on these incredible experiences</p>
+            </div>
+
+            <div class="events-slider">
+                <div class="slider-container" id="eventsSlider">
+                    <!-- Event 1 -->
+                    <div class="event-slide active">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Neon Nights Festival">
+                            <div class="event-overlay">
+                                <div class="event-badge">Featured</div>
+                                <div class="event-countdown" data-date="2025-03-15T18:00:00">
+                                    <div class="countdown-item">
+                                        <span class="countdown-number" id="days">0</span>
+                                        <span class="countdown-label">Days</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number" id="hours">0</span>
+                                        <span class="countdown-label">Hours</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number" id="minutes">0</span>
+                                        <span class="countdown-label">Min</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number" id="seconds">0</span>
+                                        <span class="countdown-label">Sec</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-date"><i class="fas fa-calendar"></i> March 15, 2025</span>
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Miami Beach</span>
+                            </div>
+                            <h3 class="event-title">Neon Nights Festival 2025</h3>
+                            <p class="event-description">The ultimate electronic music experience with world-class DJs
+                                and immersive visual effects.</p>
+                            <div class="event-footer">
+                                <div class="event-price">From $125</div>
+                                <div class="event-capacity">
+                                    <div class="capacity-bar">
+                                        <div class="capacity-fill" style="width: 64%"></div>
+                                    </div>
+                                    <span>3,200 / 5,000 booked</span>
+                                </div>
+                                <a href="booking.html?event=1" class="btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-slide">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Tech Innovation Summit">
+                            <div class="event-overlay">
+                                <div class="event-badge">Hot</div>
+                                <div class="event-countdown" data-date="2025-02-28T09:00:00">
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">45</span>
+                                        <span class="countdown-label">Days</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">12</span>
+                                        <span class="countdown-label">Hours</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">30</span>
+                                        <span class="countdown-label">Min</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">15</span>
+                                        <span class="countdown-label">Sec</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-date"><i class="fas fa-calendar"></i> February 28, 2025</span>
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> San Francisco</span>
+                            </div>
+                            <h3 class="event-title">Tech Innovation Summit</h3>
+                            <p class="event-description">Discover the future of technology with industry leaders and
+                                innovative startups.</p>
+                            <div class="event-footer">
+                                <div class="event-price">From $299</div>
+                                <div class="event-capacity">
+                                    <div class="capacity-bar">
+                                        <div class="capacity-fill" style="width: 75%"></div>
+                                    </div>
+                                    <span>750 / 1,000 booked</span>
+                                </div>
+                                <a href="booking.html?event=2" class="btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="event-slide">
+                        <div class="event-image">
+                            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Summer Music Carnival">
+                            <div class="event-overlay">
+                                <div class="event-badge">New</div>
+                                <div class="event-countdown" data-date="2025-06-21T16:00:00">
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">120</span>
+                                        <span class="countdown-label">Days</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">8</span>
+                                        <span class="countdown-label">Hours</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">45</span>
+                                        <span class="countdown-label">Min</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">30</span>
+                                        <span class="countdown-label">Sec</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <span class="event-date"><i class="fas fa-calendar"></i> June 21, 2025</span>
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Los Angeles</span>
+                            </div>
+                            <h3 class="event-title">Summer Music Carnival</h3>
+                            <p class="event-description">A celebration of music, art, and culture under the summer sun.
+                            </p>
+                            <div class="event-footer">
+                                <div class="event-price">From $180</div>
+                                <div class="event-capacity">
+                                    <div class="capacity-bar">
+                                        <div class="capacity-fill" style="width: 56%"></div>
+                                    </div>
+                                    <span>4,500 / 8,000 booked</span>
+                                </div>
+                                <a href="booking.html?event=3" class="btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="slider-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose EventPulse?</h2>
+                <p class="section-subtitle">Experience the future of event management</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>Digital Tickets</h3>
+                    <p>QR code tickets delivered instantly to your phone with PDF backup</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-plus"></i>
+                    </div>
+                    <h3>Calendar Sync</h3>
+                    <p>Automatically add events to Google Calendar with one click</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Support</h3>
+                    <p>24/7 customer support directly through WhatsApp</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Updates</h3>
+                    <p>Live capacity tracking and event updates</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile First</h3>
+                    <p>Optimized for mobile with touch-friendly interface</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>SSL encrypted payments with fraud protection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Popup -->
+    <div class="newsletter-popup" id="newsletterPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="closePopup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-header">
+                <h3>Stay in the Loop!</h3>
+                <p>Get exclusive access to early bird tickets and event updates</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Subscribe
+                </button>
+            </form>
+            <p class="popup-disclaimer">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </div>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta" id="floatingCTA">
+        <a href="booking.html" class="floating-btn">
+            <i class="fas fa-ticket-alt"></i>
+            <span>Book Now</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3>Join the EventPulse Community</h3>
+                    <p>Get exclusive access to early bird tickets, behind-the-scenes content, and event updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="brand">
+                            <div class="logo">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="brand-text">
+                                <h2>EventPulse</h2>
+                                <span>Live the Experience</span>
+                            </div>
+                        </div>
+                        <p>Creating unforgettable experiences through world-class events, connecting people with music,
+                            technology, and culture.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="speakers.html">Speakers</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Event Types</h4>
+                        <ul>
+                            <li><a href="#">Music Festivals</a></li>
+                            <li><a href="#">Tech Conferences</a></li>
+                            <li><a href="#">Club Events</a></li>
+                            <li><a href="#">Corporate Events</a></li>
+                            <li><a href="#">Workshops</a></li>
+                            <li><a href="#">Networking</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>123 Event Street</p>
+                                <p>Miami Beach, FL 33139</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@eventpulse.com</p>
+                        </div>
+                        <div class="support-badge">
+                            <div class="status-dot"></div>
+                            <span>24/7 Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 EventPulse. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="terms.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="terms.html">Refund Policy</a>
+                        </div>
+                    </div>
+                    <div class="footer-badges">
+                        <span>Made with ❤️ for music lovers</span>
+                        <div class="security-badges">
+                            <span class="badge">Secure</span>
+                            <span class="badge">SSL</span>
+                            <span class="badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

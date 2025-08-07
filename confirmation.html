@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - EventPulse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+                    <span><i class="fas fa-envelope"></i> info@eventpulse.com</span>
+                </div>
+                <div class="header-announcement">
+                    <span class="pulse-dot"></span>
+                    <span>Booking Confirmed - Check your email for tickets</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h1>EventPulse</h1>
+                        <span>Live the Experience</span>
+                    </div>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="events.html" class="nav-link"><i class="fas fa-calendar"></i> Events</a></li>
+                    <li><a href="schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                    <li><a href="speakers.html" class="nav-link"><i class="fas fa-users"></i> Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-phone"></i> Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="booking-status">
+                        <i class="fas fa-check-circle"></i>
+                        Confirmed
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Confirmation Section -->
+    <section class="confirmation-section">
+        <div class="container">
+            <!-- Success Header -->
+            <div class="confirmation-header">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1 class="confirmation-title">Booking Confirmed!</h1>
+                <p class="confirmation-subtitle">Your tickets have been successfully reserved</p>
+                <div class="booking-reference">
+                    <span class="reference-label">Booking Reference:</span>
+                    <span class="reference-number" id="bookingReference">EP123456789</span>
+                    <button class="copy-btn" id="copyReference" title="Copy Reference">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="confirmation-content">
+                <!-- Ticket Details -->
+                <div class="ticket-details">
+                    <div class="section-header">
+                        <h2>Your Tickets</h2>
+                        <div class="ticket-actions">
+                            <button class="btn-secondary" id="downloadPDF">
+                                <i class="fas fa-download"></i>
+                                Download PDF
+                            </button>
+                            <button class="btn-secondary" id="addToCalendar">
+                                <i class="fas fa-calendar-plus"></i>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ticket-container">
+                        <!-- Digital Ticket Template -->
+                        <div class="digital-ticket" id="digitalTicket">
+                            <div class="ticket-header">
+                                <div class="ticket-logo">
+                                    <i class="fas fa-music"></i>
+                                    <span>EventPulse</span>
+                                </div>
+                                <div class="ticket-type">General Admission</div>
+                            </div>
+                            
+                            <div class="ticket-content">
+                                <div class="event-info">
+                                    <h3 class="event-title" id="ticketEventTitle">Neon Nights Festival 2025</h3>
+                                    <div class="event-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Date:</span>
+                                            <span class="detail-value" id="ticketDate">March 15, 2025</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Time:</span>
+                                            <span class="detail-value" id="ticketTime">6:00 PM</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Venue:</span>
+                                            <span class="detail-value" id="ticketVenue">Ocean Drive Arena, Miami Beach</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Ticket Holder:</span>
+                                            <span class="detail-value" id="ticketHolder">John Doe</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="ticket-qr">
+                                    <canvas id="qrCode" width="120" height="120"></canvas>
+                                    <p class="qr-text">Scan at venue entrance</p>
+                                </div>
+                            </div>
+                            
+                            <div class="ticket-footer">
+                                <div class="barcode">
+                                    <div class="barcode-lines">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <p class="barcode-number" id="barcodeNumber">123456789012</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Summary -->
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    
+                    <div class="summary-card">
+                        <div class="customer-info">
+                            <h4>Customer Information</h4>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <span class="info-label">Name:</span>
+                                    <span class="info-value" id="customerName">John Doe</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Email:</span>
+                                    <span class="info-value" id="customerEmail">john@example.com</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Phone:</span>
+                                    <span class="info-value" id="customerPhone">+1 555 123 4567</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Booking Date:</span>
+                                    <span class="info-value" id="bookingDate">January 15, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-breakdown">
+                            <h4>Order Breakdown</h4>
+                            <div class="breakdown-items" id="orderBreakdown">
+                                <div class="breakdown-item">
+                                    <span>General Admission × 2</span>
+                                    <span>$250.00</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Service Fee</span>
+                                    <span>$12.50</span>
+                                </div>
+                                <div class="breakdown-item total">
+                                    <span>Total</span>
+                                    <span>$262.50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Information -->
+            <div class="important-info">
+                <h3><i class="fas fa-info-circle"></i> Important Information</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Mobile Tickets</h4>
+                            <p>Your tickets are digital. Present your phone with the QR code at the entrance. PDF backup has been emailed to you.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Arrive Early</h4>
+                            <p>We recommend arriving 30-60 minutes before the event starts to allow time for security checks and finding your area.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>ID Required</h4>
+                            <p>Bring a valid government-issued photo ID that matches the name on your ticket for age verification.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Check Your Email</h4>
+                            <p>Confirmation email with PDF tickets has been sent. Check your spam folder if you don't see it within 5 minutes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Check Your Email</h4>
+                            <p>We've sent your confirmation and PDF tickets to your email address.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Add to Calendar</h4>
+                            <p>Don't forget to add the event to your calendar so you don't miss it!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Stay Updated</h4>
+                            <p>Follow us on social media for event updates, artist announcements, and more.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Enjoy the Event!</h4>
+                            <p>Arrive early, bring your ID, and get ready for an unforgettable experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="confirmation-actions">
+                <a href="events.html" class="btn-secondary">
+                    <i class="fas fa-calendar"></i>
+                    Browse More Events
+                </a>
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </a>
+                <button class="btn-success" id="shareBooking">
+                    <i class="fas fa-share-alt"></i>
+                    Share Event
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Support -->
+    <div class="whatsapp-support">
+        <a href="https://wa.me/15551234567" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>Need Help?</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3>Thanks for Booking with EventPulse!</h3>
+                    <p>Follow us for updates and exclusive offers on upcoming events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="brand">
+                            <div class="logo">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="brand-text">
+                                <h2>EventPulse</h2>
+                                <span>Live the Experience</span>
+                            </div>
+                        </div>
+                        <p>Creating unforgettable experiences through world-class events, connecting people with music, technology, and culture.</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="speakers.html">Speakers</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="terms.html">Refund Policy</a></li>
+                            <li><a href="#">Ticket Transfer</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Need Help?</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>support@eventpulse.com</p>
+                        </div>
+                        <div class="support-badge">
+                            <div class="status-dot"></div>
+                            <span>24/7 Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 EventPulse. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="terms.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="terms.html">Refund Policy</a>
+                        </div>
+                    </div>
+                    <div class="footer-badges">
+                        <span>Secure booking platform</span>
+                        <div class="security-badges">
+                            <span class="badge">Secure</span>
+                            <span class="badge">SSL</span>
+                            <span class="badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="confirmation.js"></script>
+</body>
+</html>

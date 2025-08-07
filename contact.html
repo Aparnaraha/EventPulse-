@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support - EventPulse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+                    <span><i class="fas fa-envelope"></i> info@eventpulse.com</span>
+                </div>
+                <div class="header-announcement">
+                    <span class="pulse-dot"></span>
+                    <span>24/7 Support Available - We're here to help!</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h1>EventPulse</h1>
+                        <span>Live the Experience</span>
+                    </div>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="events.html" class="nav-link"><i class="fas fa-calendar"></i> Events</a></li>
+                    <li><a href="schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                    <li><a href="speakers.html" class="nav-link"><i class="fas fa-users"></i> Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="contact.html" class="nav-link active"><i class="fas fa-phone"></i> Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="btn-primary book-now-btn">
+                        <i class="fas fa-ticket-alt"></i> Book Tickets
+                    </button>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Contact Support">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Contact Support</h1>
+                <p class="page-subtitle">We're here to help with all your event needs</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                    <span>Contact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Contact Methods -->
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Get instant help through our live chat or call our support team</p>
+                    <div class="contact-buttons">
+                        <button class="btn-primary" id="liveChatBtn">
+                            <i class="fas fa-comments"></i>
+                            Start Live Chat
+                        </button>
+                        <a href="tel:+15551234567" class="btn-secondary">
+                            <i class="fas fa-phone"></i>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Support</h3>
+                    <p>Quick responses via WhatsApp for booking help and event info</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/15551234567" class="btn-primary whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Message on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Send us detailed questions and we'll respond within 2 hours</p>
+                    <div class="contact-buttons">
+                        <a href="mailto:support@eventpulse.com" class="btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form and Info -->
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="section-header">
+                        <h2>Send us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="booking">Booking Support</option>
+                                <option value="refund">Refund Request</option>
+                                <option value="event-info">Event Information</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="accessibility">Accessibility</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookingRef">Booking Reference (if applicable)</label>
+                            <input type="text" id="bookingRef" name="bookingRef" placeholder="EP123456789">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please describe your question or issue in detail..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priority">Priority Level</label>
+                            <select id="priority" name="priority">
+                                <option value="low">Low - General inquiry</option>
+                                <option value="medium" selected>Medium - Need help soon</option>
+                                <option value="high">High - Urgent issue</option>
+                                <option value="emergency">Emergency - Event is today/tomorrow</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="updates" name="updates">
+                                <span class="checkmark"></span>
+                                I'd like to receive updates about my inquiry via email
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <div class="contact-info-card">
+                        <h3>Get in Touch</h3>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Address</h4>
+                                    <p>123 Event Street<br>Miami Beach, FL 33139<br>United States</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                                    <small>24/7 Support Available</small>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:support@eventpulse.com">support@eventpulse.com</a></p>
+                                    <small>Response within 2 hours</small>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>WhatsApp</h4>
+                                    <p><a href="https://wa.me/15551234567" target="_blank">+1 (555) 123-4567</a></p>
+                                    <small>Quick responses</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Hours -->
+                    <div class="office-hours-card">
+                        <h3>Office Hours</h3>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span>Monday - Friday</span>
+                                <span>9:00 AM - 8:00 PM EST</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Saturday</span>
+                                <span>10:00 AM - 6:00 PM EST</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sunday</span>
+                                <span>12:00 PM - 6:00 PM EST</span>
+                            </div>
+                        </div>
+                        <div class="emergency-note">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>Emergency support available 24/7 for events happening within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Quick Links -->
+                    <div class="faq-links-card">
+                        <h3>Quick Help</h3>
+                        <div class="faq-links">
+                            <a href="faq.html#booking" class="faq-link">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span>Booking Issues</span>
+                            </a>
+                            <a href="faq.html#refunds" class="faq-link">
+                                <i class="fas fa-undo"></i>
+                                <span>Refunds & Cancellations</span>
+                            </a>
+                            <a href="faq.html#event-info" class="faq-link">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Event Information</span>
+                            </a>
+                            <a href="faq.html#account" class="faq-link">
+                                <i class="fas fa-user"></i>
+                                <span>Account Help</span>
+                            </a>
+                        </div>
+                        <a href="faq.html" class="btn-secondary btn-sm">
+                            <i class="fas fa-question-circle"></i>
+                            View All FAQs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Widget (Hidden initially) -->
+    <div class="live-chat-widget" id="liveChatWidget">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-headset"></i>
+                <span>Live Support</span>
+            </div>
+            <button class="chat-close" id="chatClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hi! I'm here to help. What can I assist you with today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <p>Visit our office in the heart of Miami Beach</p>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>EventPulse Headquarters</h3>
+                    <p>123 Event Street, Miami Beach, FL 33139</p>
+                    <div class="map-buttons">
+                        <a href="https://maps.google.com/?q=Miami+Beach,FL" target="_blank" class="btn-primary">
+                            <i class="fas fa-directions"></i>
+                            Get Directions
+                        </a>
+                        <button class="btn-secondary" onclick="navigator.share({title: 'EventPulse Location', text: '123 Event Street, Miami Beach, FL 33139'})">
+                            <i class="fas fa-share"></i>
+                            Share Location
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe for event updates and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="brand">
+                            <div class="logo">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="brand-text">
+                                <h2>EventPulse</h2>
+                                <span>Live the Experience</span>
+                            </div>
+                        </div>
+                        <p>Creating unforgettable experiences through world-class events, connecting people with music, technology, and culture.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="speakers.html">Speakers</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">Help Center</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="terms.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>123 Event Street</p>
+                                <p>Miami Beach, FL 33139</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>support@eventpulse.com</p>
+                        </div>
+                        <div class="support-badge">
+                            <div class="status-dot"></div>
+                            
+                            <span>24/7 Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 EventPulse. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="terms.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="terms.html">Refund Policy</a>
+                        </div>
+                    </div>
+                    <div class="footer-badges">
+                        <span>Made with ❤️ for music lovers</span>
+                        <div class="security-badges">
+                            <span class="badge">Secure</span>
+                            <span class="badge">SSL</span>
+                            <span class="badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

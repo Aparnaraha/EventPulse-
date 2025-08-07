@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - EventPulse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+                    <span><i class="fas fa-envelope"></i> info@eventpulse.com</span>
+                </div>
+                <div class="header-announcement">
+                    <span class="pulse-dot"></span>
+                    <span>Next Event: Neon Nights Festival - March 15, 2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h1>EventPulse</h1>
+                        <span>Live the Experience</span>
+                    </div>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="events.html" class="nav-link active"><i class="fas fa-calendar"></i> Events</a></li>
+                    <li><a href="schedule.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+                    <li><a href="speakers.html" class="nav-link"><i class="fas fa-users"></i> Speakers</a></li>
+                    <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-phone"></i> Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="btn-primary book-now-btn">
+                        <i class="fas fa-ticket-alt"></i> Book Tickets
+                    </button>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Events">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">All Events</h1>
+                <p class="page-subtitle">Discover amazing events happening around the world</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                    <span>Events</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Filter -->
+    <section class="events-filter">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Events</button>
+                    <button class="filter-tab" data-filter="music">Music</button>
+                    <button class="filter-tab" data-filter="conference">Conference</button>
+                    <button class="filter-tab" data-filter="festival">Festival</button>
+                    <button class="filter-tab" data-filter="club">Club</button>
+                </div>
+                <div class="filter-controls">
+                    <select class="filter-select" id="dateFilter">
+                        <option value="all">All Dates</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                    </select>
+                    <select class="filter-select" id="locationFilter">
+                        <option value="all">All Locations</option>
+                        <option value="miami">Miami</option>
+                        <option value="san-francisco">San Francisco</option>
+                        <option value="new-york">New York</option>
+                        <option value="los-angeles">Los Angeles</option>
+                    </select>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search events..." id="searchInput">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="events-grid-section">
+        <div class="container">
+            <div class="events-grid" id="eventsGrid">
+                <!-- Event Card 1 -->
+                <div class="event-card" data-category="festival" data-location="miami" data-date="2025-03-15">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Neon Nights Festival">
+                        <div class="event-overlay">
+                            <div class="event-badge featured">Featured</div>
+                            <div class="event-actions">
+                                <button class="action-btn" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date"><i class="fas fa-calendar"></i> Mar 15, 2025</span>
+                            <span class="event-time"><i class="fas fa-clock"></i> 6:00 PM</span>
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Miami Beach</span>
+                        </div>
+                        <h3 class="event-title">
+                            <a href="event-detail.html?id=1">Neon Nights Festival 2025</a>
+                        </h3>
+                        <p class="event-description">The ultimate electronic music experience with world-class DJs and immersive visual effects.</p>
+                        <div class="event-capacity">
+                            <div class="capacity-bar">
+                                <div class="capacity-fill" style="width: 64%"></div>
+                            </div>
+                            <span class="capacity-text">3,200 / 5,000 tickets sold</span>
+                        </div>
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">$125</span>
+                            </div>
+                            <a href="booking.html?event=1" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card" data-category="conference" data-location="san-francisco" data-date="2025-02-28">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tech Innovation Summit">
+                        <div class="event-overlay">
+                            <div class="event-badge hot">Hot</div>
+                            <div class="event-actions">
+                                <button class="action-btn" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date"><i class="fas fa-calendar"></i> Feb 28, 2025</span>
+                            <span class="event-time"><i class="fas fa-clock"></i> 9:00 AM</span>
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> San Francisco</span>
+                        </div>
+                        <h3 class="event-title">
+                            <a href="event-detail.html?id=2">Tech Innovation Summit</a>
+                        </h3>
+                        <p class="event-description">Discover the future of technology with industry leaders and innovative startups.</p>
+                        <div class="event-capacity">
+                            <div class="capacity-bar">
+                                <div class="capacity-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="capacity-text">750 / 1,000 tickets sold</span>
+                        </div>
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">$299</span>
+                            </div>
+                            <a href="booking.html?event=2" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="event-card" data-category="club" data-location="new-york" data-date="2025-02-20">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Underground Club Experience">
+                        <div class="event-overlay">
+                            <div class="event-badge new">New</div>
+                            <div class="event-actions">
+                                <button class="action-btn" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date"><i class="fas fa-calendar"></i> Feb 20, 2025</span>
+                            <span class="event-time"><i class="fas fa-clock"></i> 10:00 PM</span>
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> New York</span>
+                        </div>
+                        <h3 class="event-title">
+                            <a href="event-detail.html?id=3">Underground Club Experience</a>
+                        </h3>
+                        <p class="event-description">Exclusive underground music experience in an intimate setting.</p>
+                        <div class="event-capacity">
+                            <div class="capacity-bar">
+                                <div class="capacity-fill" style="width: 93%"></div>
+                            </div>
+                            <span class="capacity-text">280 / 300 tickets sold</span>
+                        </div>
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">$75</span>
+                            </div>
+                            <a href="booking.html?event=3" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="event-card" data-category="festival" data-location="los-angeles" data-date="2025-06-21">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Summer Music Carnival">
+                        <div class="event-overlay">
+                            <div class="event-badge featured">Featured</div>
+                            <div class="event-actions">
+                                <button class="action-btn" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date"><i class="fas fa-calendar"></i> Jun 21, 2025</span>
+                            <span class="event-time"><i class="fas fa-clock"></i> 4:00 PM</span>
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Los Angeles</span>
+                        </div>
+                        <h3 class="event-title">
+                            <a href="event-detail.html?id=4">Summer Music Carnival</a>
+                        </h3>
+                        <p class="event-description">A celebration of music, art, and culture under the summer sun.</p>
+                        <div class="event-capacity">
+                            <div class="capacity-bar">
+                                <div class="capacity-fill" style="width: 56%"></div>
+                            </div>
+                            <span class="capacity-text">4,500 / 8,000 tickets sold</span>
+                        </div>
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">$180</span>
+                            </div>
+                            <a href="booking.html?event=4" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Event Cards -->
+                <div class="event-card" data-category="music" data-location="miami" data-date="2025-04-10">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/2274725/pexels-photo-2274725.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jazz Under the Stars">
+                        <div class="event-overlay">
+                            <div class="event-badge">Limited</div>
+                            <div class="event-actions">
+                                <button class="action-btn" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date"><i class="fas fa-calendar"></i> Apr 10, 2025</span>
+                            <span class="event-time"><i class="fas fa-clock"></i> 7:30 PM</span>
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Miami</span>
+                        </div>
+                        <h3 class="event-title">
+                            <a href="event-detail.html?id=5">Jazz Under the Stars</a>
+                        </h3>
+                        <p class="event-description">An intimate jazz evening with world-renowned musicians in a stunning outdoor setting.</p>
+                        <div class="event-capacity">
+                            <div class="capacity-bar">
+                                <div class="capacity-fill" style="width: 82%"></div>
+                            </div>
+                            <span class="capacity-text">410 / 500 tickets sold</span>
+                        </div>
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">$89</span>
+                            </div>
+                            <a href="booking.html?event=5" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card" data-category="conference" data-location="new-york" data-date="2025-05-15">
+                    <div class="event-image">
+                        <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Digital Marketing Expo">
+                        <div class="event-overlay">
+                            <div class="event-badge">Early Bird</div>
+                            <div class="event-actions">
+                                <button class="action-btn" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date"><i class="fas fa-calendar"></i> May 15, 2025</span>
+                            <span class="event-time"><i class="fas fa-clock"></i> 9:00 AM</span>
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> New York</span>
+                        </div>
+                        <h3 class="event-title">
+                            <a href="event-detail.html?id=6">Digital Marketing Expo</a>
+                        </h3>
+                        <p class="event-description">Learn the latest digital marketing strategies from industry experts.</p>
+                        <div class="event-capacity">
+                            <div class="capacity-bar">
+                                <div class="capacity-fill" style="width: 45%"></div>
+                            </div>
+                            <span class="capacity-text">675 / 1,500 tickets sold</span>
+                        </div>
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">$199</span>
+                            </div>
+                            <a href="booking.html?event=6" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="btn-secondary" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    Load More Events
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta" id="floatingCTA">
+        <a href="booking.html" class="floating-btn">
+            <i class="fas fa-ticket-alt"></i>
+            <span>Book Now</span>
+        </a>
+    </div>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3>Join the EventPulse Community</h3>
+                    <p>Get exclusive access to early bird tickets, behind-the-scenes content, and event updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="brand">
+                            <div class="logo">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="brand-text">
+                                <h2>EventPulse</h2>
+                                <span>Live the Experience</span>
+                            </div>
+                        </div>
+                        <p>Creating unforgettable experiences through world-class events, connecting people with music, technology, and culture.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="speakers.html">Speakers</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Event Types</h4>
+                        <ul>
+                            <li><a href="#">Music Festivals</a></li>
+                            <li><a href="#">Tech Conferences</a></li>
+                            <li><a href="#">Club Events</a></li>
+                            <li><a href="#">Corporate Events</a></li>
+                            <li><a href="#">Workshops</a></li>
+                            <li><a href="#">Networking</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>123 Event Street</p>
+                                <p>Miami Beach, FL 33139</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@eventpulse.com</p>
+                        </div>
+                        <div class="support-badge">
+                            <div class="status-dot"></div>
+                            <span>24/7 Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 EventPulse. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="terms.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="terms.html">Refund Policy</a>
+                        </div>
+                    </div>
+                    <div class="footer-badges">
+                        <span>Made with ❤️ for music lovers</span>
+                        <div class="security-badges">
+                            <span class="badge">Secure</span>
+                            <span class="badge">SSL</span>
+                            <span class="badge">Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

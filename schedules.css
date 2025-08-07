@@ -1,0 +1,54 @@
+/* Schedules Page Custom Styles */
+.schedule-main {
+    min-height: 60vh;
+    padding: 60px 0 40px 0;
+    background: var(--bg-secondary, #1A1A2E);
+}
+.schedule-section .section-title {
+    font-family: var(--font-primary, 'Orbitron', monospace);
+    font-size: 2.5rem;
+    color: var(--primary-cyan, #06B6D4);
+    margin-bottom: 10px;
+    text-align: center;
+}
+.schedule-section .section-subtitle {
+    color: var(--text-secondary, #B4B4B8);
+    text-align: center;
+    margin-bottom: 30px;
+}
+#schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.schedule-item {
+    background: var(--bg-card, rgba(26,26,46,0.8));
+    border-radius: 12px;
+    box-shadow: var(--shadow-card, 0 10px 30px rgba(0,0,0,0.3));
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s;
+}
+.schedule-item:hover {
+    box-shadow: var(--shadow-neon, 0 0 30px rgba(168,85,247,0.5));
+}
+.schedule-item .event-title {
+    font-size: 1.4rem;
+    color: var(--primary-pink, #EC4899);
+    margin-bottom: 8px;
+}
+.schedule-item .event-date {
+    color: var(--primary-green, #10B981);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.schedule-item .event-location {
+    color: var(--neon-cyan, #22D3EE);
+    margin-bottom: 8px;
+}
+.schedule-item .event-description {
+    color: var(--text-secondary, #B4B4B8);
+}

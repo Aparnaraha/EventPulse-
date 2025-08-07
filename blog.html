@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EventPulse - Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Header (copy your header/nav from index.html) -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+          <span><i class="fas fa-envelope"></i> info@eventpulse.com</span>
+        </div>
+        <div class="header-announcement">
+          <span class="pulse-dot"></span>
+          <span>Next Event: Neon Nights Festival - March 15, 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <div class="logo">
+            <i class="fas fa-music"></i>
+          </div>
+          <div class="brand-text">
+            <h1>EventPulse</h1>
+            <span>Live the Experience</span>
+          </div>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="events.html" class="nav-link"><i class="fas fa-calendar"></i> Events</a></li>
+          <li><a href="schedules.html" class="nav-link"><i class="fas fa-clock"></i> Schedule</a></li>
+          <li><a href="speakers.html" class="nav-link"><i class="fas fa-users"></i> Speakers</a></li>
+          <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+          <li><a href="blog.html" class="nav-link active"><i class="fas fa-blog"></i> Blog</a></li>
+          <li><a href="contact.html" class="nav-link"><i class="fas fa-phone"></i> Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="booking.html" class="btn-primary book-now-btn">
+            <i class="fas fa-ticket-alt"></i> Book Tickets
+          </a>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Blog Section -->
+  <main class="blog-main">
+    <section class="blog-section">
+      <div class="container">
+        <h1 class="section-title">Latest from Our Blog</h1>
+        <p class="section-subtitle">Insights, news, and stories from the EventPulse team and community.</p>
+        <div id="blog-list" class="blog-list">
+          <!-- Blog posts will load here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 EventPulse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="blog.js"></script>
+</body>
+
+</html>
